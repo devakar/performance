@@ -1,0 +1,68 @@
+{
+    "instance_min_count": 1,
+    "instance_max_count": 2,
+    "scaling_rules": [
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold":30,
+            "operator": "<",
+            "cool_down_secs": 300,
+            "adjustment": "-1"
+        },
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 50,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+1"
+        }
+    ],
+    "schedules": {
+        "timezone": "Asia/Kolkata",
+        "recurring_schedule": [
+            {
+                "start_time": "10:00",
+                "end_time": "18:00",
+                "days_of_week": [
+                    1,
+                    2,
+                    3
+                ],
+                "instance_min_count": 2,
+                "instance_max_count": 3,
+                "initial_min_instance_count": 2
+            },
+            {
+                "start_time": "11:00",
+                "end_time": "19:30",
+                "days_of_month": [
+                    10,
+                    20,
+                    30
+                ],
+                "instance_min_count": 1,
+                "instance_max_count": 2
+            }
+        ],
+        "specific_date": [
+            {
+                "start_date_time": "2019-08-26T17:45",
+                "end_date_time": "2019-08-26T17:55",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_date_time": "2018-09-26T18:30",
+                "end_date_time": "2018-09-26T18:45",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            }
+        ]
+    }
+}

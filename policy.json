@@ -1,0 +1,198 @@
+{
+    "instance_min_count": 1,
+    "instance_max_count": 10,
+    "scaling_rules": [
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 30,
+            "operator": "<",
+            "cool_down_secs": 300,
+            "adjustment": "-1"
+        },
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 50,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+1"
+        },
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 55,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+1"
+        },
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 60,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+1"
+        },
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 65,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+2"
+        },
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 70,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+3"
+        },
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 75,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+4"
+        },
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 80,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+5"
+        },
+        {
+            "metric_type": "responsetime",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 500,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+1"
+        },
+        {
+            "metric_type": "responsetime",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 700,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+2"
+        },
+        {
+            "metric_type": "throughput",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 600,
+            "threshold": 2,
+            "operator": ">=",
+            "cool_down_secs": 300,
+            "adjustment": "+1"
+        }
+    ],
+    "schedules": {
+        "timezone": "Asia/Kolkata",
+        "recurring_schedule": [
+            {
+                "start_time": "10:00",
+                "end_time": "18:00",
+                "days_of_week": [
+                    1,
+                    2,
+                    3
+                ],
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_time": "11:00",
+                "end_time": "19:30",
+                "days_of_month": [
+                    10,
+                    20,
+                    30
+                ],
+                "instance_min_count": 1,
+                "instance_max_count": 2
+            }
+        ],
+        "specific_date": [
+            {
+                "start_date_time": "2019-08-26T17:45",
+                "end_date_time": "2019-08-26T17:55",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_date_time": "2019-08-26T18:45",
+                "end_date_time": "2019-08-26T19:55",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_date_time": "2019-08-26T20:45",
+                "end_date_time": "2019-08-26T21:55",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_date_time": "2019-08-26T22:45",
+                "end_date_time": "2019-08-26T22:55",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_date_time": "2019-08-26T23:45",
+                "end_date_time": "2019-08-26T23:55",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_date_time": "2019-08-26T12:45",
+                "end_date_time": "2019-08-26T12:55",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_date_time": "2019-08-26T13:45",
+                "end_date_time": "2019-08-26T13:55",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_date_time": "2019-08-26T15:45",
+                "end_date_time": "2019-08-26T15:55",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            },
+            {
+                "start_date_time": "2018-09-26T14:30",
+                "end_date_time": "2018-09-26T14:45",
+                "instance_min_count": 1,
+                "instance_max_count": 2,
+                "initial_min_instance_count": 1
+            }
+        ]
+    }
+}

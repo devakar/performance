@@ -1,0 +1,72 @@
+{
+    "instance_min_count": 1,
+    "instance_max_count": 5,
+    "scaling_rules": [
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 60,
+            "breach_duration_secs": 120,
+            "threshold": 10,
+            "operator": "<",
+            "cool_down_secs": 60,
+            "adjustment": "-1"
+        },
+        {
+            "metric_type": "memoryused",
+            "stat_window_secs": 60,
+            "breach_duration_secs": 120,
+            "threshold": 15,
+            "operator": ">=",
+            "cool_down_secs": 60,
+            "adjustment": "+1"
+        },
+        {
+            "metric_type": "responsetime",
+            "stat_window_secs": 60,
+            "breach_duration_secs": 120,
+            "threshold": 500,
+            "operator": ">=",
+            "cool_down_secs": 60,
+            "adjustment": "+1"
+        },
+        {
+            "metric_type": "throughput",
+            "stat_window_secs": 300,
+            "breach_duration_secs": 120,
+            "threshold": 2,
+            "operator": ">=",
+            "cool_down_secs": 60,
+            "adjustment": "+1"
+        }
+    ],
+    "schedules": {
+        "timezone": "Asia/Kolkata",
+        "recurring_schedule": [
+            {
+                "start_time": "10:00",
+                "end_time": "14:30",
+                "days_of_week": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "instance_min_count": 1,
+                "instance_max_count": 4,
+                "initial_min_instance_count": 2
+            },
+            {
+                "start_time": "11:00",
+                "end_time": "19:30",
+                "days_of_month": [
+                    10,
+                    20,
+                    30
+                ],
+                "instance_min_count": 1,
+                "instance_max_count": 2
+            }
+        ]
+    }
+}
